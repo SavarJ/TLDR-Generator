@@ -51,9 +51,8 @@ const App: React.FC = () => {
           cols={50}
           placeholder="Enter paragraph you want to summarize here..."
           onChange={(e) => setTextarea(e.target.value)}
-        >
-          {textarea}
-        </textarea>
+          value={textarea}
+        ></textarea>
         <button
           type="submit"
           // make the button a cool dark gradient with a nice hover and button should be small
