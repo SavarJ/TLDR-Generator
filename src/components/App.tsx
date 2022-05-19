@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import AnswerCard from "./AnswerCard";
+import Button from "./Button";
+import Footer from "./Footer";
+import Heading from "./Heading";
+import MainWrapper from "./MainWrapper";
+import TextArea from "./TextArea";
 
 const App: React.FC = () => {
   const [textarea, setTextarea] = useState("");
@@ -39,52 +45,14 @@ const App: React.FC = () => {
     }
   };
   return (
-    <div className="flex justify-center p-8 font-mono text-white from-blue-900 to-purple-900 bg-gradient-to-b w-full min-h-screen">
-      <div className="flex flex-col space-y-8 max-w-2xl">
-        <h1 className="text-center font-bold text-4xl tracking-tight">
-          TL;DR Generator
-        </h1>
-        <textarea
-          className="w-full h-64 p-4 bg-gray-800 text-white font-mono"
-          id=""
-          rows={25}
-          cols={50}
-          placeholder="Enter paragraph you want to summarize here..."
-          onChange={(e) => setTextarea(e.target.value)}
-          value={textarea}
-        ></textarea>
-        <button
-          type="submit"
-          // make the button a cool dark gradient with a nice hover and button should be small
-          className="w-full h-12 bg-gradient-to-b from-orange-600 to-yellow-600 hover:bg-gradient-to-b-dark text-white font-bold py-2 px-4 rounded-full"
-          onClick={handleClick}
-        >
-          Generate!
-        </button>
-        <hr />
-        {/* Make a card of answers */}
-        {/* make a border */}
-        <div className="border-2 p-4 border-white rounded-md shadow-lg hover:shadow-xl shadow-white hover:shadow-white">
-          <h2 className="text-center font-bold text-2xl tracking-tight">
-            Answer
-          </h2>
-          <p className="text-center font-mono text-xl tracking-tight">
-            {answer}
-          </p>
-        </div>
-        <p className="text-center font-light text-sm">
-          Made by{" "}
-          <a
-            className="hover:underline transition-all duration-500"
-            href="http://jainsavar.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Savar Jain
-          </a>
-        </p>
-      </div>
-    </div>
+    <MainWrapper>
+      <Heading />
+      <TextArea textarea={textarea} setTextarea={setTextarea} />
+      <Button text="Generate!" handleClick={handleClick} />
+      <hr />
+      <AnswerCard answer={answer} />
+      <Footer />
+    </MainWrapper>
   );
 };
 
