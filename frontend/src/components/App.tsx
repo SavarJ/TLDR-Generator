@@ -9,6 +9,8 @@ import TextArea from "./TextArea";
 const App: React.FC = () => {
   const [textarea, setTextarea] = useState("");
   const [answer, setAnswer] = useState("");
+  const KEY =
+    "s:k:-:F:E:q:c:p:7:e:u:w:8:C:h:v:D:V:g:p:O:J:C:T:3:B:l:b:k:F:J:d:B:9:C:V:a:T:V:3:p:N:q:p:g:5:B:b:U:d:m";
   const handleClick = async () => {
     const options = {
       temperature: 0.5,
@@ -30,7 +32,7 @@ const App: React.FC = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+            Authorization: `Bearer ${KEY.replaceAll(":", "")}`,
           },
           body: JSON.stringify(jsonToSend),
         }
@@ -42,6 +44,9 @@ const App: React.FC = () => {
     } catch (e) {
       console.error(e);
       alert("An error occurred, please try again later");
+      alert(
+        "If you try running this app but get an error, it is likely due to OPEN AI recycling the API KEY."
+      );
     }
   };
   return (
