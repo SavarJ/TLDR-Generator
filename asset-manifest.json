@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/openai-app/static/css/main.7b59e82b.css",
+    "main.js": "/openai-app/static/js/main.1919ac63.js",
+    "static/js/787.cb18ac4f.chunk.js": "/openai-app/static/js/787.cb18ac4f.chunk.js",
+    "index.html": "/openai-app/index.html",
+    "main.7b59e82b.css.map": "/openai-app/static/css/main.7b59e82b.css.map",
+    "main.1919ac63.js.map": "/openai-app/static/js/main.1919ac63.js.map",
+    "787.cb18ac4f.chunk.js.map": "/openai-app/static/js/787.cb18ac4f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b59e82b.css",
+    "static/js/main.1919ac63.js"
+  ]
+}
