@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
 app.get("/api/answers", async (req, res) => {
   try {
     const answers = await Answer.find({});
-    res.json({ data: answers, statusCode: 200 });
+    const data = answers.sort((a, b) => b.createdAt - a.createdAt);
+    res.json({ data: data, statusCode: 200 });
   } catch (err) {
     res.json({ data: err, statusCode: 500 });
   }
@@ -63,7 +64,8 @@ app.post("/api/answers", async (req, res) => {
     });
     await answer.save();
     const answers = await Answer.find({});
-    res.json({ data: answers, statusCode: 200 });
+    const data2 = answers.sort((a, b) => b.createdAt - a.createdAt);
+    res.json({ data: data2, statusCode: 200 });
   } catch (err) {
     res.json({ data: err, statusCode: 500 });
   }
