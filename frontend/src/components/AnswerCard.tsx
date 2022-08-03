@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Answer } from "./Answer";
 
 interface AnswerCardProps {
-  prompt: string;
-  answer: string;
+  data: Answer;
+  index: number;
 }
-const AnswerCard: React.FC<AnswerCardProps> = ({ prompt, answer }) => {
+const AnswerCard: React.FC<AnswerCardProps> = ({ data, index }) => {
   const [fullyVisisble, setFullyVisisble] = useState(false);
   return (
     <div
@@ -14,7 +15,19 @@ const AnswerCard: React.FC<AnswerCardProps> = ({ prompt, answer }) => {
       onClick={() => setFullyVisisble(!fullyVisisble)}
     >
       <h2 className="font-bold text-lg tracking-tight">
-        TL;DR -{">"} {answer}
+        #{index} | Created At{" "}
+        {new Date(data.createdAt).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+        })}
+      </h2>
+      <hr />
+      <br />
+      <h2 className="font-bold text-lg tracking-tight">
+        TL;DR -{">"} {data.answer}
       </h2>
       <br />
       <div
@@ -26,7 +39,7 @@ const AnswerCard: React.FC<AnswerCardProps> = ({ prompt, answer }) => {
         }
         `}
       >
-        Original: {prompt}
+        Original: {data.prompt}
       </div>
     </div>
   );
