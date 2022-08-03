@@ -5,7 +5,6 @@ interface ResultsProps {
   array: Answer[];
 }
 const Results: React.FC<ResultsProps> = ({ array }) => {
-  console.log({ array });
   return (
     <>
       <h1 className="text-center text-3xl font-bold">Results</h1>
