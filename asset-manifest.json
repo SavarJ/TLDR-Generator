@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SavarJ/TLDR-Generator/static/css/main.db5acb60.css",
-    "main.js": "/SavarJ/TLDR-Generator/static/js/main.28040f6b.js",
+    "main.css": "/SavarJ/TLDR-Generator/static/css/main.1b3c898b.css",
+    "main.js": "/SavarJ/TLDR-Generator/static/js/main.c69c1197.js",
     "static/js/787.cb18ac4f.chunk.js": "/SavarJ/TLDR-Generator/static/js/787.cb18ac4f.chunk.js",
     "index.html": "/SavarJ/TLDR-Generator/index.html",
-    "main.db5acb60.css.map": "/SavarJ/TLDR-Generator/static/css/main.db5acb60.css.map",
-    "main.28040f6b.js.map": "/SavarJ/TLDR-Generator/static/js/main.28040f6b.js.map",
+    "main.1b3c898b.css.map": "/SavarJ/TLDR-Generator/static/css/main.1b3c898b.css.map",
+    "main.c69c1197.js.map": "/SavarJ/TLDR-Generator/static/js/main.c69c1197.js.map",
     "787.cb18ac4f.chunk.js.map": "/SavarJ/TLDR-Generator/static/js/787.cb18ac4f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db5acb60.css",
-    "static/js/main.28040f6b.js"
+    "static/css/main.1b3c898b.css",
+    "static/js/main.c69c1197.js"
   ]
 }
