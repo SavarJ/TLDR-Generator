@@ -10,7 +10,9 @@ const Results: React.FC<ResultsProps> = ({ array }) => {
       <h1 className="text-center text-3xl font-bold">Results</h1>
       <div className="flex flex-col items-center justify-center space-y-8">
         {array.map((data, idx) => {
-          return <AnswerCard key={data._id} data={data} index={idx + 1} />;
+          return (
+            <AnswerCard key={data._id} data={data} index={array.length - idx} />
+          );
         })}
       </div>
     </>
