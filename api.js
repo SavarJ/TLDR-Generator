@@ -3,8 +3,14 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const fetch = require("node-fetch");
 require("dotenv").config();
+const rateLimit = require("express-rate-limit");
 
 const app = express();
+
+app.set("trust proxy", process.env.numberOfProxies);
+
+app.set("trust proxy", process.env.numberOfProxies);
+app.get("/ip", (request, response) => response.send(request.ip));
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -34,7 +40,14 @@ app.get("/api/answers", async (req, res) => {
   }
 });
 
-app.post("/api/answers", async (req, res) => {
+const apiLimiter = rateLimit({
+  windowMs: 7 * 24 * 60 * 60 * 1000, // 15 minutes
+  max: 5, // Limit each IP to 5 requests per `window` (here, per 7 days)
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
+
+app.post("/api/answers", apiLimiter, async (req, res) => {
   try {
     const response = await fetch(
       "https://api.openai.com/v1/engines/text-curie-001/completions",
