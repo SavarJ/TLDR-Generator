@@ -78,6 +78,16 @@ const App: React.FC = () => {
         handleClick={handleClick}
         disabled={buttonDisabled}
       />
+      <p>
+        If this is not working for whatever reason, feel free to check out a
+        working demo{" "}
+        <a
+          href="https://github.com/SavarJ/TLDR-Generator"
+          className="cursor-pointer underline"
+        >
+          here!
+        </a>
+      </p>
       <hr />
       <Results array={answers} />
       <Footer />
