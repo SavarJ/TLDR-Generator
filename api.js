@@ -48,7 +48,7 @@ app.post("/api/answers", async (req, res) => {
           )}`,
         },
         body: JSON.stringify({
-          prompt: `${req.body.prompt}\n\nTl;dr`,
+          prompt: `${req.body.prompt.slice(0, 500)}\n\nTl;dr`,
           temperature: 0.5,
           max_tokens: 64,
           top_p: 1.0,
