@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SavarJ/TLDR-Generator/static/css/main.1b3c898b.css",
-    "main.js": "/SavarJ/TLDR-Generator/static/js/main.c69c1197.js",
-    "static/js/787.cb18ac4f.chunk.js": "/SavarJ/TLDR-Generator/static/js/787.cb18ac4f.chunk.js",
-    "index.html": "/SavarJ/TLDR-Generator/index.html",
-    "main.1b3c898b.css.map": "/SavarJ/TLDR-Generator/static/css/main.1b3c898b.css.map",
-    "main.c69c1197.js.map": "/SavarJ/TLDR-Generator/static/js/main.c69c1197.js.map",
-    "787.cb18ac4f.chunk.js.map": "/SavarJ/TLDR-Generator/static/js/787.cb18ac4f.chunk.js.map"
+    "main.css": "/TLDR-Generator/static/css/main.1b3c898b.css",
+    "main.js": "/TLDR-Generator/static/js/main.6baf255d.js",
+    "static/js/787.cb18ac4f.chunk.js": "/TLDR-Generator/static/js/787.cb18ac4f.chunk.js",
+    "index.html": "/TLDR-Generator/index.html",
+    "main.1b3c898b.css.map": "/TLDR-Generator/static/css/main.1b3c898b.css.map",
+    "main.6baf255d.js.map": "/TLDR-Generator/static/js/main.6baf255d.js.map",
+    "787.cb18ac4f.chunk.js.map": "/TLDR-Generator/static/js/787.cb18ac4f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b3c898b.css",
-    "static/js/main.c69c1197.js"
+    "static/js/main.6baf255d.js"
   ]
 }
